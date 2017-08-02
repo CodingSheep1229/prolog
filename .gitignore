@@ -1,0 +1,7 @@
+application/config/database.php
+application/config/mail.php
+temp/*
+data/*
+.DS_Store
+*.swp
+uploads/
