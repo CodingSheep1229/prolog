@@ -1,0 +1,727 @@
+﻿
+@font-face
+{
+
+	font-family: testdata;
+	src: url(/judge/font/Inconsolata.ttf);
+}
+@font-face
+{
+
+	font-family: AAfont;
+	src: url(/judge/font/mona.ttf);
+}
+@font-face
+{
+	font-family: 'Klavika Bold';
+	src: url(/judge/font/Klavika.ttf);
+}
+/*
+It's unknow that why glyphicons can't be applied
+@font-face
+{
+  font-family: 'Glyphicons Halflings';
+  src: url(/judge/fonts/glyphicons-halflings-regular.eot);
+  src: url(/judge/fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(/judge/fonts/glyphicons-halflings-regular.woff) format('woff'), url(/judge/fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(/judge/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg');
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-user:before {
+  content: "\e008";
+}
+*/
+
+body
+{
+	font-family: "メイリオ", "Droid Sans Fallback", "Microsoft JhengHei", "Bitstream Vera Sans", "DejaVu Sans", "Tahoma", "LiHei Pro", "文泉驛微米黑", "AR PL UMing TW", "新細明體", "sans-serif";
+	font-size:14px;
+}
+
+h1
+{
+	color: #494949;
+	font-size: 40px;
+}
+table
+{
+	background: #FFFFFF;
+	border:3px;
+	border-color: #000000;
+}
+
+.wood {
+	background: url("/judge/image/wood.jpg");
+}
+#indexT td {
+	/* index Table */
+	padding: 7px 0px;
+}
+
+tr {
+	background: white;
+}
+tr:hover
+{
+	background: #B34D4D;
+	color: #fbfbfb;
+	opacity: 1;
+    -o-transition: color .10s linear;
+    -webkit-transition: color .10s linear;
+    -moz-transition: color .10s linear;
+    transition:  color .10s linear;
+}
+tr:hover span, tr:hover a
+{
+	color: #fbfbfb;
+    -o-transition: color .10s linear;
+    -webkit-transition: color .10s linear;
+    -moz-transition: color .10s linear;
+    transition:  color .10s linear;
+}
+td
+{
+	padding: 5px 0px;
+	text-align: center;
+	box-shadow:0px 0px 0px rgba(40%,40%,40%,0),0px 0px 0px rgba(40%,40%,40%,0),0px 0px 1px rgba(0%,0%,0%,0.1);
+}
+
+.odd
+{
+	background-color: #fffcee;
+}
+.warn
+{
+	background:#FFD0D0;
+}
+.AC
+{
+	font-weight: bold;
+	color:#0000FF;
+}
+.WA
+{
+	font-weight: bold;
+	color: #ff5050;
+}
+.red
+{
+	color: #ff6161;
+}
+.blue
+{
+	/*color: #88bcfd;*/
+	color: #549ffe;
+}
+.red-back{
+    /*background: #FFEBEB;*/
+}
+.white-back{
+}
+.green-back{
+    /*background: #dff0d8;*/
+}
+.green-back .blue,
+.red-back .red
+{
+	/*color: black;*/
+}
+.green-back:hover .blue,
+.red-back:hover .red
+{
+	color: #fbfbfb;
+}
+/* --not good looking--
+.green-back:hover,
+.red-back:hover,
+.white-back:hover
+{
+	background: #fbfbfb;
+}
+.green-back:hover span, .green-back:hover a, .green-back:hover td,
+.red-back:hover span, .red-back:hover a, .red-back:hover td,
+.white-back:hover span, .white-back:hover a, .white-back:hover td
+{
+	color: black;
+    -o-transition: color .10s linear;
+    -webkit-transition: color .10s linear;
+    -moz-transition: color .10s linear;
+    transition:  color .10s linear;
+}
+*/
+
+.aa
+{
+	font-family: "MS-PGothic","MS PGothic","ＭＳ Ｐゴシック","AAfont";
+	font-size: 12px;
+}
+.testdata
+{
+	font-family: testdata;
+	font-size: 18px;
+}
+th
+{
+	padding: 10px 10px;
+	text-align: center;
+}
+a
+{
+	color: #0099FF;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #ff6161;
+	/*font-weight: bold;*/
+	text-decoration: none;
+}
+.title
+{
+	color: #393939;
+	font-weight: normal;
+	/*text-shadow: 0 1px 1px rgba(0,0,0,0.5);*/
+	font-size: 24px;
+	margin: 40px 0 40px 0px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #cfcfcf;
+}
+
+/* FORM */
+select, input[type="text"], input[type="password"], textarea
+{
+	border-radius: 2px;
+	border: #AAA 1px solid;
+	padding: 4px 7px;
+	margin: 7px;
+}
+select
+{
+
+}
+/*
+input[type="text"] , input[type="password"]
+{
+	transition: width .2s linear;
+	width: 70px;
+	background-color: #fbfbfb;
+	color: #262626;
+}
+select:focus, input[type="text"]:focus, input[type="password"]:focus, textarea:focus
+{
+	box-shadow: 0 0 5px #fbfbfb, 0 0 5px #fbfbfb, 0 0 5px #fbfbfb;
+}
+input[type="text"]:focus, input[type="password"]:focus
+{
+	width: 200px;
+}
+*/
+/* button making */
+input[type="button"], input[type="submit"], .button
+{
+	/*
+	border-radius: 2px;
+	color: #262626;
+	background: #fbfbfb;
+	border: darkgrey 1px solid;
+	padding: 3px 7px;*/
+	margin-left: 17px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #dcdcdc;
+	padding: 7px 15px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #f9f9f9 35%, #f0f0f0 70% );
+	background:-ms-linear-gradient( top, #f9f9f9 35%, #f0f0f0 70% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#f0f0f0');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(35%, #f9f9f9), color-stop(70%, #f0f0f0) );
+	background-color:#f9f9f9;
+	color:#666666;
+	display:inline-block;
+}
+input[type="button"]:hover, input[type="submit"]:hover, .button:hover
+{
+	/*box-shadow: 0 0 5px #fbfbfb, 0 0 5px #fbfbfb, 0 0 5px #fbfbfb;*/
+	background:-moz-linear-gradient( center top, #f0f0f0 35%, #f0f0f0 70% );
+	background:-ms-linear-gradient( top, #f0f0f0 35%, #f0f0f0 70% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#f0f0f0');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(35%, #f0f0f0), color-stop(70%, #f0f0f0) );
+	background-color: #f9f9f9;
+}
+input[type="button"]:active, input[type="submit"]:active, .button:active
+{
+	position: relative;
+	top:1px;
+}
+.button a
+{
+	color: #777777;
+}
+
+/* HEAD */
+#logo {
+  width: 55px;
+  padding-top: 0px;
+  margin-left: 5px;
+  margin-right: 15px;
+  opacity: 0.85;
+}
+.Nav
+{
+	padding-left: 20px;
+}
+.Nav li /* position */
+{
+	margin: 0px;
+	float: left;
+	height: auto;
+	width: auto;
+	padding-right: 0px;
+	list-style-type: none;
+}
+.Nav li a /* nav hover background & font */
+{
+	cursor: pointer;
+	color: #B34D4D;
+	font-size: 15px;
+	padding: 14px 14px;
+	border-radius: 4px;
+	display: block; /* let position be center */
+	list-style-type: none;
+}
+.Nav li a:hover /* hover */
+{
+	margin: 0px;
+	background-color: #B34D4D;
+	color: #fbfbfb;
+	text-decoration: none;
+    -o-transition: color .10s linear;
+    -webkit-transition: color .10s linear;
+    -moz-transition: color .10s linear;
+    transition:  color .10s linear;
+}
+.Nav li ul /* dropdown background */
+{
+	position: absolute;
+	display: none;
+	margin: 0px;
+	padding-left: 0px; /* if no, padding-left = 40, i don't know why QQ */
+	padding-top: 7px;
+	padding-bottom: 7px;
+	background-image: url("/judge/image/nav_background.jpg");
+	box-shadow:1px 1px 1px rgba(40%,40%,60%,0.1),1px 1px 2px rgba(40%,40%,60%,0.1),2px 2px 3px rgba(20%,20%,40%,0.4);
+}
+.Nav li ul li a /* dropdown font */
+{
+	clear: both;
+	list-style-position: outside;
+	list-style-image: none;
+	list-style-type: none;
+	position: static;
+	left: 0;
+	color: #B34D4D;
+	padding: 3px 20px;
+	clear: both;
+	line-height: 1.42857143;
+	white-space: nowrap;
+	text-align: left;
+	border-radius: 4px;
+	line-height: 20px;
+	font-size: 14px;
+	padding-bottom: 5px;
+	padding-left: 25px;
+	padding-right: 15px;
+	padding-top: 5px;
+	width: 167px;
+	z-index: auto;
+}
+.Nav li ul li a:hover /* dropdown font hover */
+{
+	color: #fbfbfb;
+	background-color: #B34D4D;
+	background-image: none;
+	text-decoration: none;
+    -o-transition: color .10s linear;
+    -webkit-transition: color .10s linear;
+    -moz-transition: color .10s linear;
+    transition:  color .10s linear;
+}
+.navbar { /* nav bar background */
+  background-image: url("/judge/image/nav_background.jpg");
+  background-size: cover;
+  padding-top: 4px;
+  padding-bottom: 55px;
+  margin-left: 1%;
+  margin-right: 1%;
+  box-shadow:1px 1px 1px rgba(40%,40%,60%,0.1),1px 1px 2px rgba(40%,40%,60%,0.1),2px 2px 3px rgba(20%,20%,40%,0.4);
+}
+
+#probsearch
+{
+	height: 40px;
+	position: absolute;
+	left: 300px;
+}
+#loginform
+{
+	position: absolute;
+	margin-top: 3px;
+	margin-right: 17%;
+	height: 100%;
+	right:10px;
+	top:6px;
+	color: #333333;
+
+	color: white;
+	font-size: 12px;
+}
+#announce
+{
+	margin-top: 100px;
+	margin-left: 50px;
+	width: 700px;
+	color: #FF0000;
+}
+#menu
+{
+	margin-left: 15px;
+	margin-top: 60px;
+	height: 70px;
+}
+#msg
+{
+	text-align:center;
+	color:#FF0066;
+	font-weight:bold;
+	background:#FFFF99;
+	border:#FFFF00;
+	border-width:1px;
+	margin-top:80px;
+}
+
+#bodydiv
+{
+	margin: 100px 9% 0 9%;
+	word-wrap:break-word;
+
+	-moz-border-radius: 0px 0px 8px 8px;
+	border-radius:  0px 0px 8px 8px;
+}
+
+.jumbotron{
+  	margin-top: 100px;
+  	margin-bottom: 50px;
+    background-image:url("/judge/image/j_image_ver1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    border-radius: 7px;
+    text-align: left;
+}
+
+.jumbotron h1{
+	margin-left: 50px;
+}
+.jumbotron p{
+	margin-left: 50px;
+}
+
+.container
+{
+	font-family: "メイリオ", "Droid Sans Fallback", "Microsoft JhengHei", "Bitstream Vera Sans", "DejaVu Sans", "Tahoma", "LiHei Pro", "文泉驛微米黑", "AR PL UMing TW", "新細明體", "sans-serif";
+	padding:30px;
+}
+#footdiv
+{
+	margin: 70px 0px;
+	height:100px;
+	word-wrap: break-word;
+	/*background:url(/judge/img/foot2.jpg) repeat-x;*/
+
+	-moz-border-radius: 8px 8px 8px 8px;
+	border-radius:  8px 8px 8px 8px;
+}
+.copyright
+{
+	text-align:center;
+	letter-spacing:2px;
+	font-weight: bold;
+	font-size:12px;
+	padding-top:10px;
+	line-height:15px;
+	color: 	grey;
+	font-family: "メイリオ", "Droid Sans Fallback", "Microsoft JhengHei", "Bitstream Vera Sans", "DejaVu Sans", "Tahoma", "LiHei Pro", "文泉驛微米黑", "AR PL UMing TW", "新細明體", "sans-serif";
+}
+
+#search
+{
+	margin:0 0 30px 0;
+}
+
+
+
+@media (max-width: 800px) {
+    .overflow{
+      display: none;
+    }
+}
+
+@media (min-width: 799px) {
+    .reset{
+      display: none;
+    }
+}
+
+.contributor{
+  	margin-top: 0px;
+  	margin-bottom: 50px;
+    background-image:url("/judge/image/contributor.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    border-radius: 7px;
+    text-align: left;
+    box-shadow:2px 2px 2px rgba(40%,40%,60%,0.2),2px 2px 4px rgba(40%,40%,60%,0.2),4px 4px 6px rgba(20%,20%,40%,0.4);
+}
+.contributor h1{
+	margin-left: 50px;
+}
+.contributor p{
+	margin-left: 50px;
+}
+
+
+.marketing {
+  padding-top: 30px;
+  margin-left: 9%;
+}
+.marketing .col-lg-4 {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.col-lg-4 {
+	text-align: center;
+	margin-left: -25px;
+}
+.marketing .col-lg-3 {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.col-lg-3 {
+	text-align: center;
+	margin-left: -25px;
+}
+.marketing .col-lg-6 {
+  text-align: center;
+  margin: 50px 0px;
+}
+.marketing h2 {
+  font-weight: normal;
+  margin: 3px;
+}
+.marketing .col-lg-4 p {
+  font-size: 18px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.marketing .col-lg-3 p {
+  font-size: 18px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.about{
+  background-image: url("/judge/image/about_back.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 11px;
+  padding-bottom: 30px;
+  /*cover background --> but I don't like the coding*/
+  margin-top: -90px;
+  margin-bottom: -250px;
+  margin-left: -120px;
+  margin-right: -120px;
+}
+
+#login_logo {
+   height: 130px;
+   position: relative;
+   margin-top: 7%;
+   opacity: 0.85;
+}
+
+#login_block {
+  width: 100%;
+  height: 100%;
+  background-image: url("/judge/image/background.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  text-align: center;
+}
+
+#login_form {
+   width: 480px;
+   height: 260px;
+   margin: auto;
+   border-radius: 40px;
+   box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.2);
+   background-image: url("/judge/image/login_image.png");
+   background-size: cover;
+   position: relative;
+   opacity: 0.8;
+   text-align: center;
+}
+
+.login_inp {
+   margin-top: 35px;
+}
+.login_inp > input {
+   line-height: 2;
+}
+.login_inp > input[type="text"] {
+	margin-top: 30px;
+}
+.login_btn {
+   margin-top: 10px;
+}
+
+#reg_form {
+   width: 800px;
+   height: 450px;
+   margin: auto;
+   border-radius: 50px;
+   padding: 10px 50px;
+   box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.2);
+   background-image: url("/judge/image/login_image.png");
+   background-size: cover;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-top: -225px;
+   margin-left: -400px;
+   opacity: 0.8;
+   text-align: left;
+}
+
+#forget_form {
+   width: 500px;
+   height: 245px;
+   margin: auto;
+   border-radius: 50px;
+   padding: 10px 50px;
+   box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.2);
+   background-image: url("/judge/image/login_image.png");
+   background-size: cover;
+   position: center;
+   top: 50%;
+   left: 50%;
+   margin-top: 150px;
+
+   opacity: 0.8;
+   text-align: middle;
+}
+
+#reset_passwd {
+   width: 500px;
+   height: 255px;
+   margin: auto;
+   border-radius: 50px;
+   padding: 20px 50px;
+   box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.2);
+   background-image: url("/judge/image/login_image.png");
+   background-size: cover;
+
+   top: 50%;
+   left: 50%;
+   margin-top: 150px;
+
+   opacity: 0.8;
+   text-align: middle;
+}
+
+#regist > span {
+   display: inline-block;
+   width: 150px;
+}
+
+#tab-container {
+	clear: left;
+}
+
+.tabs-menu {
+    height: 30px;
+    float: left;
+	padding-left: 0px;
+	margin-bottom: -1px;
+    clear: both;
+}
+
+.tabs-menu li {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-right: 10px;
+    list-style: none;
+    background-color: transparent;
+    border-top: 1px solid #d4d4d1;
+    border-right: 1px solid #d4d4d1;
+    border-left: 1px solid #d4d4d1;
+}
+
+.tabs-menu li.current {
+    position: relative;
+    background-color: #b34d4d;
+    border-bottom: 1px solid #fff;
+    z-index: 5;
+}
+
+.tabs-menu li a {
+	color: #b34d4d;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none; 
+}
+
+.tabs-menu .current a {
+	color: #fff;
+}
+
+.tab {
+    border: 1px solid #d4d4d1;
+    background-color: #fff;
+    float: left;
+    margin-bottom: 20px;
+    width: auto;
+	display: block;
+}
+
+.tab-content {
+    width: 800px;
+    padding: 20px;
+    display: none;
+}
+
+#tab-1 {
+	display: block;   
+}
+
+.submission {
+	clear: left;
+}
