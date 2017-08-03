@@ -10,7 +10,7 @@ $this->load->helper('url');
 $this->load->view('empty.php');
 
 ?>
-<link rel="stylesheet" type="text/css" href="/operation_skylight/application/views/Prolog.css">
+<link rel="stylesheet" type="text/css" href="./application/views/Prolog.css">
 </head>
 
 <body>
@@ -111,7 +111,8 @@ echo form_open('user/register' , $attributes);
   src="http://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-<script type="text/javascript" src="/operation_skylight/application/views/Prolog.js"></script>
+<script type="text/javascript" src=".
+/application/views/Prolog.js"></script>
 </html>
 
 <?php
